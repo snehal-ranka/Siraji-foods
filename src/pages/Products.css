@@ -136,8 +136,9 @@
 }
 
 .add-to-cart-btn {
-  background: #333;
+  background: #28a745;
   color: white;
+  width: auto;
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
@@ -148,7 +149,7 @@
 }
 
 .add-to-cart-btn:hover {
-  background: #555;
+  background: #218838;
 }
 
 /* Product Modal */
@@ -244,7 +245,8 @@
 }
 
 .modal-add-to-cart {
-  background: #333;
+  background: #28a745;
+  /* width: auto; */
   color: white;
   border: none;
   padding: 15px 30px;
@@ -253,11 +255,11 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
-  align-self: flex-start;
+   align-self: flex-start; 
 }
 
 .modal-add-to-cart:hover {
-  background: #555;
+  background: #218838;
 }
 
 /* Responsive Design */

@@ -70,6 +70,7 @@
   color: #ffffff; /* text-white */
   margin-bottom: 1.5rem; /* mb-6 (6 * 0.25rem) */
   font-family: Georgia, serif; /* font-serif */
+  animation: bounceIn 1s ease-out;
   }
 
   /* md:text-6xl (Tablets and Desktops) */
@@ -99,7 +100,9 @@
 
   /* leading-relaxed: line-height of 1.625 */
   line-height: 1.625;
+   animation: bounceIn 1s ease-out 0.6s both;
 }
+
 
 .hero-subtitle {
   max-width: 600px;
@@ -150,6 +153,7 @@
   /* Effects: shadow-lg, transition-all */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
+  animation: bounceIn 1s ease-out 0.6s both;
 }
 
 /* Hover States: hover:bg-primary/90, hover:shadow-xl */
@@ -203,6 +207,9 @@
   font-weight: 700;
   margin-bottom: 50px;
   color: #333;
+  animation: slideInFromLeft 0.8s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 /* Authentic Flavors Grid */
@@ -284,7 +291,7 @@
 }
 
 .add-to-cart-btn {
-  background: #333;
+  background: #28a745;
   color: white;
   border: none;
   padding: 12px 24px;
@@ -293,11 +300,11 @@
   font-weight: 600;
   cursor: pointer;
   transition: background 0.3s ease;
-  width: 100%;
+  width: auto;
 }
 
 .add-to-cart-btn:hover {
-  background: #555;
+  background: #218838;
 }
 
 /* Signature Mixes */
@@ -392,6 +399,9 @@
   color:rgb(41, 76, 129);;
   font-size: 2.5rem;
   margin-bottom: 20px;
+  animation: slideInFromRight 0.8s ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .cta-section p {
@@ -444,5 +454,57 @@
   
   .products-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 2;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

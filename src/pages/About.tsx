@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './About.css';
+import myImage from '../assets/aboutus.jpeg';
 
 const About: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -35,28 +36,70 @@ const About: React.FC = () => {
       <div className="container">
         <div className="about-content">
           <div className="about-text">
-            <h1>About</h1>
-            <h2>Cultivating our description or instructions</h2>
+            <h1>About Siraji Foods</h1>
+            <h2>We believe that food is more than just nourishment </h2>
             <p>
-              Sure, let's be your what at first glance. We have in years been 
-              found on these little in food and page style here.
+             — It’s a connection to our roots, traditions, and memories.
             </p>
             <p>
-              The combination of this level with our goal, gives from the 
-              standard China communities capable be perfect enabled not 
-              relevant Content. Our understanding that base made or Personal 
-              Control will surely provide information. This has gotten our 
-              valuable that their unique skills which best team to provide 
-              all system business.
-            </p>
+              Founded with a passion for authentic taste, Siraji Foods brings you a carefully curated range of traditional food products, including spice mixes and sweets like gulab jamun, crafted using time-honored family recipes.
+</p>
+            <h3>
+We focus on:
+</h3><p>  </p>
             <p>
-              Now, let's also put all ideas first, on the team we should be best 
-              quality of life and power service businesses optimal as demanding, 
-              the alternative others, is their designation. This remarkable 
-              team to most technology and services.
-            </p>
+✅ High-quality ingredients
+</p>
+            <p>
+✅ Authentic flavors
+</p>
+            <p>
+✅ Hygienic preparation
+</p>
+            <p>
+✅ Consistent taste
+</p>
+            <p>
 
-            <div className="contact-form-section">
+Our mission is to make it easy for every household to enjoy the richness of traditional Indian cuisine without compromising on quality or convenience.
+            </p>
+           
+  <div className="about-text">
+               <h3>
+            🍲 Our Story
+            </h3>
+            
+            <p>  </p>
+            <p>Siraji Foods started as a small initiative inspired by family traditions and recipes passed down through generations. What began in a home kitchen has now grown into a brand committed to delivering the same homemade taste to every customer.
+ </p><p> 
+Each product is made with care, ensuring that every bite reflects the warmth and authenticity of traditional cooking. </p>
+           <p>
+            
+            </p>
+               <p>
+            
+            </p>
+            <h2>🎯 Our Vision </h2>
+            <p>
+            To become a trusted name in every kitchen by delivering authentic, high-quality food products that celebrate Indian culinary heritage.
+            </p>
+            <h2>❤️ Why Choose Us </h2>
+            <p>
+                        
+✅  Authentic traditional recipes  </p> 
+ <p>
+✅ Premium quality ingredients  </p>
+ <p>
+✅ Made with care and hygiene  </p>
+ <p>
+✅ Perfect balance of taste and convenience  
+</p> </div>
+           
+          </div>
+
+          <div className="about-image">
+            <img src={myImage} alt="Chef portrait" />
+ <div className="contact-form-section">
               <h3>Contact me</h3>
               <form className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-row">
@@ -111,10 +154,12 @@ const About: React.FC = () => {
                 <button type="submit" className="submit-btn">Submit</button>
               </form>
             </div>
-          </div>
 
-          <div className="about-image">
-            <img src="/api/placeholder/500/600" alt="Chef portrait" />
+
+
+
+
+           
           </div>
         </div>
       </div>

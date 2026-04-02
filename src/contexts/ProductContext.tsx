@@ -2,6 +2,12 @@ import React, { createContext, useContext, useReducer, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { productService, initializeDefaultProducts } from '../firebase/services';
 import type { Product } from './CartContext';
+import chakli from '../assets/chakalimix.jpeg';
+import chiwada from '../assets/chiwdamasala.jpeg';
+import jamun from '../assets/gilabjamunaata.jpeg';
+import methi from '../assets/kasturimethi.jpeg';
+import achar from '../assets/lonchemasala.jpeg';
+import papad from '../assets/papad-aata.jpeg';
 
 interface ProductState {
   products: Product[];
@@ -99,35 +105,35 @@ export const ProductProvider: React.FC<{ children: ReactNode }> = ({ children })
             id: 1,
             name: 'Premium Papad Mix',
             price: 99,
-            image: '/api/placeholder/300/300',
+            image: papad,
             description: 'Fresh premium pears, perfect for healthy snacking. Hand-picked and carefully selected for the best quality.'
           },
           {
             id: 2,
             name: 'Premium Chiwda Masala',
             price: 59,
-            image: '/api/placeholder/300/300',
+            image: chiwada,
             description: 'Collection of natural seeds and grains packed with nutrition and authentic flavors.'
           },
           {
             id: 3,
             name: 'Traditional Chakali Bhajani Peeth',
             price: 199,
-            image: '/api/placeholder/300/300',
+            image: chakli,
             description: 'Authentic spice blend for traditional cooking. Made with the finest ingredients.'
           },
           {
             id: 4,
             name: 'Gulab Jamum Mix',
             price: 179,
-            image: '/api/placeholder/300/300',
+            image: jamun,
             description: 'All natural ingredients for your kitchen. Perfect for traditional recipes.'
           },
           {
             id: 5,
             name: 'Premium Lonache Mix',
             price: 119,
-            image: '/api/placeholder/300/300',
+            image: achar,
             description: 'Hand-crafted mix with perfect combination of spices and natural ingredients.'
           },
           {
