@@ -1,0 +1,448 @@
+.home {
+  min-height: 100vh;
+}
+
+/* Loading Styles */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+}
+
+/* .hero-title {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+} */
+
+.hero-title {
+/* text-5xl (Mobile) */
+  font-size: 3rem; 
+  line-height: 1; /* leading-tight */
+  font-weight: 700; /* font-bold */
+  color: #ffffff; /* text-white */
+  margin-bottom: 1.5rem; /* mb-6 (6 * 0.25rem) */
+  font-family: Georgia, serif; /* font-serif */
+  }
+
+  /* md:text-6xl (Tablets and Desktops) */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.75rem;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 768px) {
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+
+.hero-subtitle {
+  /* text-xl: 1.25rem (20px) */
+  font-size: 1.25rem; 
+
+  /* text-white/90: White with 90% opacity */
+  color: rgba(255, 255, 255, 0.9);
+
+  /* mb-8: 8 * 0.25rem = 2rem (32px) */
+  margin-bottom: 2rem;
+
+  /* leading-relaxed: line-height of 1.625 */
+  line-height: 1.625;
+}
+
+.hero-subtitle {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  opacity: 0.9;
+} */
+
+/* .hero-cta {
+  background: #e25151;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+} */
+
+.hero-cta {
+  /* Layout: inline-flex, items-center, justify-center, gap-2 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* 8px */
+  
+  /* Sizing: h-11, px-8, py-6, text-lg */
+  height: 2.75rem; /* 44px */
+  padding: 1.5rem 2rem; /* Vertical 24px, Horizontal 32px */
+  font-size: 1.125rem; /* 18px */
+  
+  /* Style: bg-primary, text-white, font-medium, rounded-full */
+  background-color:linear-gradient(135deg, #667eea 0%, #764ba2 100%);   /* #e25151; Your Siraj Foods Red */
+  /* color: white; */
+  font-weight: 500;
+  border-radius: 9999px; /* rounded-full */
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  
+  /* Effects: shadow-lg, transition-all */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+/* Hover States: hover:bg-primary/90, hover:shadow-xl */
+.hero-cta:hover {
+  background-color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);/*  #cc4545; Slightly darker red  */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px); /* Adds a "lift" effect */
+}
+
+/* SVG Handling: [&_svg]:size-4 */
+.hero-cta svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* Disabled State: disabled:opacity-50 */
+.hero-cta:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* .hero-cta:hover {
+  background: #555;
+} */
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Styling */
+.authentic-flavors,
+.featured-products,
+.signature-mixes,
+.cta-section {
+  padding: 80px 0;
+}
+
+.authentic-flavors {
+  background: #f8f9fa;
+}
+
+.authentic-flavors h2,
+.featured-products h2,
+.signature-mixes h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+/* Authentic Flavors Grid */
+.flavors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.flavor-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.flavor-item img {
+  width: auto;
+  height: 300px;
+  border-radius: 2%;
+  object-fit: cover;
+  margin-bottom: 20px;
+
+}
+
+.flavor-item h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Featured Products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 25px;
+}
+
+.product-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.product-info p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.add-to-cart-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.add-to-cart-btn:hover {
+  background: #555;
+}
+
+/* Signature Mixes */
+.signature-mixes {
+  background: #f8f9fa;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  margin-top: -30px;
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+.signature-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.signature-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.signature-info {
+  padding: 30px;
+  flex: 1;
+}
+
+.signature-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.signature-info p {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.signature-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.signature-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.signature-btn:hover {
+  background: #555;
+}
+
+/* CTA Section */
+.cta-section {
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  color: rgb(19, 19, 19);
+  background:white
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  color:rgb(41, 76, 129);;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.cta-button {
+  background:rgb(41, 76, 129);
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .authentic-flavors h2,
+  .featured-products h2,
+  .signature-mixes h2 {
+    font-size: 2rem;
+  }
+  
+  .signature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .signature-card {
+    flex-direction: column;
+  }
+  
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
