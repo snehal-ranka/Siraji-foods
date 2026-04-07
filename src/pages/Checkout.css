@@ -1,6 +1,6 @@
 .checkout-page {
   min-height: 100vh;
-  padding: 60px 0;
+  padding: 20px;
   background: #f8f9fa;
 }
 
@@ -8,6 +8,12 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.checkout-heading{
+  text-align: center;
+  margin-bottom: 20px;
+  color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .checkout-page h1 {

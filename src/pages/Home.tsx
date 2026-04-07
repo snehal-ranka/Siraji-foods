@@ -142,9 +142,10 @@ const Home: React.FC = () => {
       </section>
 
       {/* Authentic Indian Flavors */}
-      <section ref={authenticRef} className={`authentic-flavors ${authenticVisible ? 'animate' : ''}`}>
+      {/* <section ref={authenticRef} className={`authentic-flavors ${authenticVisible ? 'animate' : ''}`}> */}
+       <section className="featured-products">
         <div className="container">
-          <h2>Authentic Indian Flavors</h2>
+          <h2 style={{animationDelay: '0.4s'}}>Authentic Indian Flavors</h2>
           <div className="flavors-grid">
             <div className="flavor-item">
               <img src="https://img1.wsimg.com/isteam/getty/544813460" alt="Premium Pears" />
@@ -188,12 +189,13 @@ const Home: React.FC = () => {
       </section>
 
       {/* Our Signature Mixes */}
-      <section ref={signatureRef} className={`signature-mixes ${signatureVisible ? 'animate' : ''}`}>
+      {/* <section ref={signatureRef} className={`signature-mixes ${signatureVisible ? 'animate' : ''}`}> */}
+        <section className="featured-products">
         <div className="container">
           <h2 style={{animationDelay: '0.6s'}}>Our Signature Mixes</h2>
-          <p className="section-subtitle">
+          <h5 className="section-subtitle">
             Hand-crafted with love, perfected over generations
-          </p>
+          </h5>
           <div className="signature-grid">
             {signatureMixes.map(product => (
               <div key={product.id} className="signature-card">
@@ -220,7 +222,7 @@ const Home: React.FC = () => {
         <div className="container">
           <div className="cta-content">
           <h2 style={{animationDelay: '0.8s'}}>Ready to Bring Tradition to Your Table?</h2>
-            <p>
+            <p className="hero-subtitle">
               Explore our range of authentic flavors with curated collections and handpicked ingredients
             </p>
             <Link to="/products" className="cta-button">Shop Now</Link>

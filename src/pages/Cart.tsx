@@ -49,7 +49,7 @@ const Cart: React.FC = () => {
                 <div className="item-details">
                   <h3>{item.name}</h3>
                   <p>{item.description}</p>
-                  <span className="item-price">${item.price}</span>
+                  <span className="item-price">₹{item.price}</span>
                 </div>
                 
                 <div className="item-controls">
@@ -70,7 +70,7 @@ const Cart: React.FC = () => {
                   </div>
                   
                   <div className="item-total">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    ₹{(item.price * item.quantity).toFixed(2)}
                   </div>
                   
                   <button 
@@ -90,7 +90,7 @@ const Cart: React.FC = () => {
               
               <div className="summary-row">
                 <span>Subtotal ({state.items.reduce((total, item) => total + item.quantity, 0)} items)</span>
-                <span>${state.total.toFixed(2)}</span>
+                <span>₹{state.total.toFixed(2)}</span>
               </div>
               
               <div className="summary-row">
@@ -100,14 +100,14 @@ const Cart: React.FC = () => {
               
               <div className="summary-row">
                 <span>Tax</span>
-                <span>${(state.total * 0.08).toFixed(2)}</span>
+                <span>₹{(state.total * 0.08).toFixed(2)}</span>
               </div>
               
               <hr />
               
               <div className="summary-row total">
                 <span>Total</span>
-                <span>${(state.total * 1.08).toFixed(2)}</span>
+                <span>₹{(state.total * 1.08).toFixed(2)}</span>
               </div>
               
               <Link to="/checkout" className="checkout-btn">

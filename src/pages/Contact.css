@@ -1,6 +1,6 @@
 .contact-page {
   min-height: 100vh;
-  padding: 60px 0;
+  padding: 20px 0;
   background: #f8f9fa;
 }
 
@@ -79,6 +79,40 @@
   color: #666;
   margin-bottom: 5px;
   line-height: 1.5;
+}
+
+.whatsapp-card {
+  /* border: 1px solid #25D366; */
+  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.2);
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 40px rgba(37, 211, 102, 0.35);
+}
+
+.whatsapp-icon {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+}
+
+.whatsapp-btn {
+  margin-top: 12px;
+  background: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 9px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe56;
+  transform: translateY(-2px);
 }
 
 .contact-form-container {
@@ -194,4 +228,10 @@
   .contact-form-container {
     padding: 25px 20px;
   }
+}
+
+.contactus-heading{
+  text-align: center;
+  margin-bottom: 20px;
+  color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }

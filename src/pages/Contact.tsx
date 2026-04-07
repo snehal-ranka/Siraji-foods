@@ -18,6 +18,14 @@ const Contact: React.FC = () => {
     }));
   };
 
+  const whatsappNumber = '+918600140444';
+  const whatsappMessage = 'Hello Siraji Udyog team, I would like to inquire about your products and pricing.';
+
+  const handleWhatsAppClick = () => {
+    const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, '')}?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Contact form submitted:', formData);
@@ -34,7 +42,8 @@ const Contact: React.FC = () => {
     <div className="contact-page">
       <div className="container">
         <div className="page-header">
-          <h1>Contact Us</h1>
+          <h1></h1>
+           <h3 className='checkout-heading'>Contact Us</h3>
           <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
         </div>
 
@@ -66,6 +75,16 @@ const Contact: React.FC = () => {
               <p>Siraji Udyog</p>
               <p>Plot no 19 and 26, Siraji nagar</p>
               <p>Hudkeahwar road, Nagpur</p>
+            </div>
+
+            <div className="contact-card whatsapp-card" onClick={handleWhatsAppClick}>
+              <div className="contact-icon whatsapp-icon">
+                <i className="fab fa-whatsapp" aria-hidden="true">📱</i>
+              </div>
+              <h3>WhatsApp Inquiry</h3>
+              <p>Chat with us instantly</p>
+              <p>+91 8600140444</p>
+              <button type="button" className="whatsapp-btn">Start Chat</button>
             </div>
           </div>
 

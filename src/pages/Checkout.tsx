@@ -62,7 +62,7 @@ const Checkout: React.FC = () => {
   return (
     <div className="checkout-page">
       <div className="container">
-        <h1>Checkout</h1>
+        <h3 className='checkout-heading'>Checkout</h3>
         
         <div className="checkout-content">
           <div className="checkout-form">
@@ -173,7 +173,7 @@ const Checkout: React.FC = () => {
                   </div>
                 </div>
                 
-                <div className="form-group">
+                {/* <div className="form-group">
                   <label htmlFor="country">Country *</label>
                   <select
                     id="country"
@@ -187,7 +187,7 @@ const Checkout: React.FC = () => {
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="Australia">Australia</option>
                   </select>
-                </div>
+                </div> */}
               </div>
 
               {/* Payment Information */}
@@ -278,7 +278,7 @@ const Checkout: React.FC = () => {
 
               <button type="submit" className="place-order-btn">
                 <Shield className="btn-icon" />
-                Place Order - ${total.toFixed(2)}
+                Place Order - ₹{total.toFixed(2)}
               </button>
             </form>
           </div>
@@ -294,7 +294,7 @@ const Checkout: React.FC = () => {
                   <div className="item-info">
                     <h4>{item.name}</h4>
                     <p>Quantity: {item.quantity}</p>
-                    <span className="item-price">${(item.price * item.quantity).toFixed(2)}</span>
+                    <span className="item-price">₹{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
                 </div>
               ))}
@@ -303,7 +303,7 @@ const Checkout: React.FC = () => {
             <div className="order-totals">
               <div className="total-row">
                 <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>₹{subtotal.toFixed(2)}</span>
               </div>
               
               <div className="total-row">
@@ -313,14 +313,14 @@ const Checkout: React.FC = () => {
               
               <div className="total-row">
                 <span>Tax</span>
-                <span>${tax.toFixed(2)}</span>
+                <span>₹{tax.toFixed(2)}</span>
               </div>
               
               <hr />
               
               <div className="total-row final-total">
                 <span>Total</span>
-                <span>${total.toFixed(2)}</span>
+                <span>₹{total.toFixed(2)}</span>
               </div>
             </div>
             
